@@ -1,0 +1,125 @@
+:root {
+  --baseOrange: #ff6f47;
+  --baseOrangeHover: #cf5b3a;
+  --checkColor: #0bd4a2;
+  --checkColorHover: #10ac85;
+  --gradientFrom: #f6d365;
+  --gradientTo: #fda085;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(
+    120deg,
+    var(--gradientFrom) 0%,
+    var(--gradientTo) 100%
+  );
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo_title h1 {
+  color: white;
+  font-size: 3em;
+  font-weight: 400;
+}
+
+.todo_inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 6rem;
+}
+
+.todo_inputs input,
+select {
+  padding: 0.7rem;
+  height: 2.4rem;
+}
+
+.todo_inputs input {
+  border: none;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.todo_inputs button {
+  /* padding: 0.4rem; */
+  cursor: pointer;
+}
+
+.faSquarePlus {
+  font-size: 1.6em;
+  color: var(--baseOrange);
+}
+
+.todo_inputs select {
+  border: none;
+  margin-left: 1rem;
+  cursor: pointer;
+  color: var(--baseOrange);
+}
+
+.todo_tasks {
+  margin-top: 4rem;
+}
+
+.todo_tasks-task {
+  margin-top: 0.4rem;
+}
+
+.todo_tasks-task input {
+  font-size: 1em;
+  font-weight: 600;
+  padding: 0.7rem;
+  border: none;
+}
+
+.todo_tasks-task button {
+  padding: 0.7rem;
+  cursor: pointer;
+}
+
+.todo_tasks-task button:first-of-type {
+  background-color: var(--checkColor);
+  color: white;
+  border: none;
+  transition: 0.4s;
+}
+
+.todo_tasks-task button:first-of-type:hover {
+  background-color: var(--checkColorHover);
+}
+
+.todo_tasks-task button:nth-of-type(2) {
+  background-color: var(--baseOrange);
+  color: white;
+  border: none;
+  transition: 0.4s;
+}
+
+.todo_tasks-task button:nth-of-type(2):hover {
+  background-color: var(--baseOrangeHover);
+}

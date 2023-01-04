@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: lightblue;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 440px;
+  background-color: #f56750;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.item_add {
+  margin-top: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.item_add input {
+  width: 90%;
+  border: none;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.item_add input::placeholder,
+input,
+button {
+  color: #f56750;
+  background-color: #ffbfb1;
+  color: #f56750;
+  font-size: 1.2em;
+  padding: 0.4rem;
+  font-weight: 500;
+}
+.item_add input:focus {
+  outline: none;
+}
+
+.item_add button {
+  width: 10%;
+  background-color: #ffbfb1;
+  border: none;
+  cursor: pointer;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.item {
+  display: grid;
+  margin-bottom: 0.6rem;
+}
+
+@media screen and (min-width: 364px) {
+  .item {
+    grid-template-columns: 1fr auto;
+  }
+}
+
+.item_description {
+  color: white;
+  font-size: 1.4em;
+}
+
+.item_description .faCircle,
+.item_description .faCheckCircle {
+  margin-right: 0.2rem;
+}
+
+.item_operation {
+  text-align: center;
+  font-size: 1.4em;
+  padding: 0.3rem 0.6rem 0.3rem 0.6rem;
+  background-color: white;
+  border-radius: 30px;
+  color: #f56750;
+}
+
+.item_operation span {
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+}
+
+.outline {
+  text-decoration: line-through;
+}
+
+.disabled {
+  background-color: rgb(214, 212, 212);
+  color: #f1a093;
+}
+
+.item_line {
+  margin-bottom: 1rem;
+}
+
+.item_amount {
+  margin-top: 0.6rem;
+  text-align: end;
+  font-size: 1.6rem;
+  color: white;
+}
+
+@media only screen and (max-width: 460px) {
+  .container {
+    width: 360px;
+  }
+}
+@media only screen and (max-width: 364px) {
+  .container {
+    width: 260px;
+  }
+}
